@@ -1,0 +1,42 @@
+$(function(){
+	//判断用户名是否存在
+	$("#username").blur(function(){
+		if($(this).val()){
+			$.ajax({
+				type:"post",
+				url:"../php/01denglu0.php",
+				async:true,
+				dataType:'json',
+				data:{
+					user:$("#username").val()
+				},
+				success:function(data){
+					$("span.warm_user").html(data.info);
+				}
+			});
+		}
+	});
+	//登录
+	$(".do_login").on("click",function(){
+		console.log($("#pswd").val())
+		$.ajax({
+			type:"post",
+			url:"../php/01denglu1.php",
+			async:true,
+			dataType:'json',
+			data:{
+				user:$("#username").val(),
+				pswd:$("#pswd").val(),
+				is_checked:$("#un-login").prop("checked")
+			},
+			success:function(data){
+				$(".warm_login").html(data.info+'</br>即将跳转');
+				setTimeout(turnTo,2000);
+				function turnTo(){
+					location.href = "../index.html";
+				}
+			}
+		});
+	})
+	
+})

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				padding: 20px 80px;
+			}
+			ul{
+				list-style: none;
+				padding: 0;
+			}
+			li{
+				text-align: center;
+				height: 100px;
+				background:#FAFAD2;
+				margin-bottom: 6px;
+				display: flex;
+				cursor: pointer;
+			}
+			li:first-child{
+				height: 50px;
+				background: #EE9A49;
+				font-size: 18px;
+			}
+			li:first-child span{
+				/*line-height: 50px;*/
+			}
+			span{
+				height: 100%;
+				/*line-height: 100px;*/
+				/*width: 200px;*/
+				flex: 2;
+				display: block;
+				float: left;
+				border: 1px solid black; 
+			}
+			span.im{
+				flex: 1 !important;
+			}
+			img{
+				height: 100%;
+				/*width: 200px;*/
+				flex: 1;
+				float: left;
+				border: 1px solid black; 
+			}
+			a{
+				text-decoration: none;
+				color: #0000CD;
+				position: absolute;
+				top: 60px;
+				left: 500px;
+				font-size: 18px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<h2>商品列表展示</h2>
+		<a href="insert_goods.html">添加商品>></a>
+		<ul>
+			<li>
+				<span class="im">商品图片信息</span>
+				<span>商品名称</span>
+				<span>商品价格</span>
+				<span>商品数量</span>
+			</li>
+			
+		</ul>
+		<script type="text/javascript" src="../js/jquery-2.1.0.min.js" ></script>
+		<script>
+			$(function(){
+				$.ajax({
+					type:"post",
+					url:"../php/04index0.php",
+					async:true,
+					dataType:'json',
+					success:function(data){
+						console.log(data);
+						var str = "";
+						for(var i=0;i<data.length;i++){
+							str+='<li onclick="turnTo('+data[i].id+')"><img src='+'../php/upload/'+data[i].imgurl+' /><span>'+data[i].name+'</span><span>'+data[i].price+'</span><span>'+data[i].num+'</span></li>';
+						};
+						$(str).appendTo($("ul"));
+					}
+				});
+				
+				
+			});
+			function turnTo(id){
+					alert("页面即将跳转...");
+					setTimeout(function(){
+						location.href = "detail1.html?id="+id;
+					},2000);
+				}
+		</script>
+	</body>
+</html>

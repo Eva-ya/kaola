@@ -1,0 +1,230 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+span.warm_user,span.warm_pass{
+	position: absolute;
+	left: -140px;
+	top: 6px;
+}
+span.warm_login{
+	position: absolute;
+	left: -140px;
+	top: 153px;
+}
+header{
+	height: 101px;
+	background-color: white;
+}
+.container{
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+header a.logo img{
+	margin-top: 29px;
+}
+header img.right{
+	float: right;
+}
+.main{
+	background-color:#F8F8F8 ;
+	width: 1349px;
+	height: 520px;
+}
+.main img.left{
+	margin-top:109px;
+}
+.main .right{
+	width: 459px;
+	height: 294px;
+	background-color: white;
+	border: 1px solid #eaeaea;
+	float: right;
+	margin-top:70px;
+	padding:30px 0px 30px 40px;
+}
+.main .right .login_wrap{
+	width: 272px;
+	float: left;
+}
+.login_wrap form{
+	position: relative;
+}
+.main .right p{
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.main .account{
+	border: 1px solid #c5cddb;
+	width: 270px;
+	height: 36px;
+	padding: 10px;
+	box-sizing: border-box;
+	position: relative;
+	margin-bottom: 15px;
+}
+.main .account i{
+	display: block;
+	width: 18px;
+	height: 18px;
+	background: url(../img/login/ursloginicon.png) no-repeat;
+	float: left;
+}
+.main .account input{
+	border: 1px solid transparent;
+	border-left:1px solid #c5cddb ;
+	height: 26px;
+	padding-left: 14px;
+	position: absolute;
+	top: 3px;
+	left: 37px;
+}
+.main .keyword{
+	border: 1px solid #c5cddb;
+	width: 270px;
+	height: 36px;
+	padding: 10px;
+	box-sizing: border-box;
+	position: relative;
+}
+.main .keyword i{
+	display: block;
+	width: 18px;
+	height: 18px;
+	background: url(../img/login/ursloginicon.png) no-repeat;
+	background-position: 0 -30px;
+	float: left;
+}
+.main .keyword input{
+	border: 1px solid transparent;
+	border-left:1px solid #c5cddb ;
+	height: 26px;
+	padding-left: 14px;
+	position: absolute;
+	top: 3px;
+	left: 37px;
+}
+.main .m_unlogin{
+	margin: 13px 0px;
+}
+.main .m_unlogin input[type=checkbox]{
+	width: 14px;
+	height: 14px;
+	background-color: white;
+	border: none;
+	position: relative;
+	top: 3px;
+	/*float: left;*/
+	/*color: red;*/
+}
+.main .m_unlogin label{
+	font-size: 12px;
+	color: #999;
+	height: 16px;
+	line-height: 16px;
+}
+.main .m_unlogin a{
+	color: #999;
+	font-size: 12px;
+	text-decoration: none;
+	float: right;
+}
+.main .login_wrap .do_login{
+	width: 270px;
+	height: 44px;
+	display: block;
+	color: white;
+	text-align: center;
+	line-height: 44px;
+	font-size: 18px;
+	background-color: #F5345E;
+	margin-top: 20px;
+	margin-bottom: 13px;
+	cursor: pointer;
+}
+.main .login_wrap p.register{
+	color: #666;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+}
+.main .login_wrap p.register a{
+	color: #51B8F1;
+	margin-left: 3px;
+}
+.main .thirdpart{
+	border-top:1px solid #eaeaea ;
+	width:350px ;
+	position: relative;
+	left: -40px;
+	padding: 10px 0px 10px 29px;
+	box-sizing: border-box;
+}
+.main .thirdpart li{
+	width: 43px;
+	height: 22px;
+	list-style: none;
+	float: left;
+	text-align: center;
+}
+.main .thirdpart li .iconfont{
+	font-size: 22px;
+}
+.main .thirdpart li a{
+	text-decoration: none;
+}
+.main .thirdpart li.aa{
+	border-left: 1px solid #eaeaea;
+}
+.main .thirdpart li:first-child{
+	width: auto;
+	font-size: 12px;
+	margin-right: 5px;
+	margin-top: 4px;
+}
+.main .qrcode{
+	width: 148px;
+	height: 354px;
+	border-left:1px solid #eaeaea ;
+	float: right;
+	margin-top: -30px;
+}
+footer.foot_b a{
+	text-decoration: none;
+	font-size: 14px;
+	
+}
+footer.foot_b {
+  width: 1350px;
+  height: 240px;
+  box-sizing: border-box;
+  background: white;
+  text-align: center;
+  padding-top: 25px;
+  font-size: 12px;
+}
+footer.foot_b a,
+footer.foot_b p {
+  color: #666;
+}
+footer.foot_b .one a{
+	padding:0px 20px;
+}
+footer.foot_b p.two {
+  padding-top: 6px;
+  line-height: 26px;
+  padding-bottom: 6px;
+  color: #999;
+}
+footer.foot_b p.two a{
+	color: #999;
+}
+footer.foot_b p.two img {
+  vertical-align: middle;
+}
+footer.foot_b .pic img {
+  height: 30px;
+  margin-left: 10px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				padding:20px 100px;
+			}
+			button{
+				width: 100px;
+				height: 30px;
+				margin-left: 60px;
+			}
+			a{
+				text-decoration: none;
+				color: #0000CD;
+				position: absolute;
+				top: 60px;
+				left: 500px;
+				font-size: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<h2>添加商品信息</h2>
+		<span class="username"></span>
+		<span>图片url：</span>
+		<input type="file" id="imgurl"/><br /><br />
+		<span>商品名称：</span>
+		<input type="text" id="good_name"/><br /><br />
+		<span>商品价格：</span>
+		<input type="text" id="good_price"/><br /><br />
+		<span>商品数量：</span>
+		<input type="text" id="goods_num"/><br /><br />
+		<span>品牌名称：</span>
+		<input type="text" id="shop_name"/><br /><br />
+		<button>提交</button>
+		<p class="information"></p>
+		<a href="goods_show.html">回到商品列表页>></a>
+		<script type="text/javascript" src="../js/jquery-2.1.0.min.js" ></script>
+		<script>
+			var oIp = document.querySelector("#imgurl");
+			$("button").on("click",function(){
+				var form = new FormData();
+				form.append("name",$("#good_name").val());
+				form.append("imgurl",oIp.files[0]);
+				form.append("price",$("#good_price").val());
+				form.append("shopname",$("#shop_name").val());
+				form.append("num",$("#goods_num").val());
+				
+				$.ajax({
+					type:"post",
+					url:"../php/03tianjia.php",
+					async:true,
+					dataType:'json',
+					data:form,
+					processData:false,
+					contentType:false,
+					success:function(data){
+						$("p.information").html(data.info);
+					}
+				});
+			})
+		</script>
+	</body>
+</html>
